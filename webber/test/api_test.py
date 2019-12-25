@@ -36,7 +36,7 @@ def verify(data):
     try:
         signature = base64.b64decode(data['signature'])
         del data['signature']
-        data_str = json.dumps(data) + ""
+        data_str = json.dumps(data) + "j"
         data_str = data_str.encode()
         #  print(data_str)
         signer = Signature_PKCS1_v1_5.new(key_pub)
@@ -53,7 +53,6 @@ def sign_test():
            parsed_data.append('{}={}'.format(key, value))
 
        parsed_str = '&'.join(parsed_data)'''
-
     data = {'msg': 'thisisamessage'}
     data_str = json.dumps(data)
     data_str = data_str.encode()
