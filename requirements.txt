@@ -20,3 +20,5 @@ uWSGI==2.0.17
 nexmo==2.3.0
 django-bootstrap3==9.1.0
 djangorestframework-jwt==1.11.0
+pycrypto==2.6.1
+
